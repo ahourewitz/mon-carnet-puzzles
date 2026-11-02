@@ -1,0 +1,1 @@
+ALTER TABLE `puzzles` ADD `collection_type` text DEFAULT 'owned' NOT NULL;
