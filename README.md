@@ -1,12 +1,12 @@
 # Pièce après pièce
 
-Le carnet personnel de puzzles d’Amandine : 21 puzzles importés de son PDF, leurs images, marques, auteurs, nombres de pièces et dates de réalisation.
+Le carnet personnel de puzzles d’Amandine : 26 puzzles importés de ses PDF, leurs images, marques, auteurs, nombres de pièces et dates de réalisation.
 
 ## Version GitHub Pages
 
 La version statique peut être publiée depuis le dossier `docs/` de la branche `main`. Elle reprend les fiches du PDF et conserve les ajouts, les changements de statut et les photos **dans le navigateur utilisé**. Elle ne nécessite pas de serveur ni de connexion à un compte pour fonctionner.
 
-Un site GitHub Pages est **accessible publiquement** : les 21 fiches et images initiales publiées dans le dépôt peuvent être consultées par toute personne qui accède au site. Les ajouts effectués ensuite restent dans le navigateur et ne sont pas envoyés sur GitHub.
+Un site GitHub Pages est **accessible publiquement** : les 26 fiches et images initiales publiées dans le dépôt peuvent être consultées par toute personne qui accède au site. Les ajouts effectués ensuite restent dans le navigateur et ne sont pas envoyés sur GitHub.
 
 Dans le site, le bouton **Sauvegarder** télécharge un fichier contenant les fiches, les souhaits et les photos ajoutées. Le bouton **Restaurer** permet de récupérer ce fichier, y compris sur un autre navigateur. Conservez régulièrement cette sauvegarde : les données du navigateur peuvent être effacées, et elles ne sont pas synchronisées automatiquement entre appareils ni avec les autres versions du carnet.
 
@@ -41,7 +41,7 @@ Si le port est occupé, utilisez `./lancer-site.command --port 5174`, puis ouvre
 
 La version privée en ligne est disponible à l’adresse https://la-puzzlotheque-d-amandine.movingtune1.chatgpt.site. Elle conserve ses données et ses photos en ligne. **Les carnets local et en ligne sont indépendants** : une modification dans l’un ne se répercute pas automatiquement dans l’autre.
 
-Les 21 fiches de départ proviennent du PDF. Les mois indiqués dans celui-ci sont conservés sans inventer de jour précis. Les dates d’achat et l’auteur manquant sont laissés non renseignés. Les images de départ sont extraites du document fourni.
+Les 26 fiches de départ proviennent des deux PDF fournis. Les mois indiqués dans celui-ci sont conservés sans inventer de jour précis. Les dates d’achat et l’auteur manquant sont laissés non renseignés. Les images de départ sont extraites du document fourni.
 
 ## Développement
 

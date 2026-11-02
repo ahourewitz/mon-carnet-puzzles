@@ -28,14 +28,37 @@ function friendlyError(error: unknown): Error {
 function openDatabase(): Promise<IDBDatabase> {
   if(database)return database;
   database=new Promise<IDBDatabase>((resolve,reject)=>{
-    const open=indexedDB.open("puzzlotheque-personnelle",1);
-    open.onupgradeneeded=()=>{
-      const db=open.result, puzzles=db.createObjectStore("puzzles",{keyPath:"id"});
-      db.createObjectStore("images",{keyPath:"id"});
+    const open=indexedDB.open("puzzlotheque-personnelle",2);
+    open.onupgradeneeded=(event)=>{
+      const db=open.result, isNew=event.oldVersion===0;
+      const puzzles=isNew?db.createObjectStore("puzzles",{keyPath:"id"}):open.transaction!.objectStore("puzzles");
+      if(isNew)db.createObjectStore("images",{keyPath:"id"});
       const now=new Date().toISOString();
-      for(const item of seed){
-        const {sourcePage: _source,...puzzle}=item;
-        puzzles.add({...puzzle,collectionType:"owned",createdAt:now,updatedAt:now});
+      const initial=seed.map(item=>{
+        const {sourcePage: _source,sourceDocument: _document,...puzzle}=item;
+        return {...puzzle,collectionType:"owned",createdAt:now,updatedAt:now};
+      });
+      if(isNew){
+        for(const puzzle of initial)puzzles.add(puzzle);
+      }else if(event.oldVersion<2){
+        const updateIds=new Set(["pdf-22","pdf-23","pdf-24","pdf-25","pdf-26"]);
+        const existing=puzzles.getAll();
+        existing.onsuccess=()=>{
+          const rows=existing.result as Puzzle[];
+          const normalized=(s:string)=>s.normalize("NFC").trim().toLocaleLowerCase("fr");
+          const keys=new Set(rows.map(p=>`${normalized(p.title)}\u0000${normalized(p.brand)}`));
+          const ids=new Set(rows.map(p=>p.id));
+          for(const puzzle of initial){
+            if(!updateIds.has(puzzle.id))continue;
+            const key=`${normalized(puzzle.title)}\u0000${normalized(puzzle.brand)}`;
+            for(const row of rows){
+              if(row.collectionType==="wishlist"&&`${normalized(row.title)}\u0000${normalized(row.brand)}`===key){
+                puzzles.put({...row,collectionType:"owned",updatedAt:now});
+              }
+            }
+            if(!ids.has(puzzle.id)&&!keys.has(key)){puzzles.add(puzzle);keys.add(key);}
+          }
+        };
       }
     };
     open.onsuccess=()=>{const db=open.result;db.onversionchange=()=>db.close();resolve(db);};

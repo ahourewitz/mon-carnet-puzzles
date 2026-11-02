@@ -1,6 +1,7 @@
 import { sqliteTable, text, integer, primaryKey, index } from "drizzle-orm/sqlite-core";
 export const collections = sqliteTable("collections", {
   ownerId: text("owner_id").primaryKey(), initializedAt: text("initialized_at").notNull(),
+  seedRevision: integer("seed_revision").notNull().default(1),
 });
 export const puzzles = sqliteTable("puzzles", {
   id: text("id").notNull(), ownerId: text("owner_id").notNull(),
