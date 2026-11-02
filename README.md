@@ -2,6 +2,16 @@
 
 Le carnet personnel de puzzles d’Amandine : 21 puzzles importés de son PDF, leurs images, marques, auteurs, nombres de pièces et dates de réalisation.
 
+## Version GitHub Pages
+
+La version statique peut être publiée depuis le dossier `docs/` de la branche `main`. Elle reprend les fiches du PDF et conserve les ajouts, les changements de statut et les photos **dans le navigateur utilisé**. Elle ne nécessite pas de serveur ni de connexion à un compte pour fonctionner.
+
+Un site GitHub Pages est **accessible publiquement** : les 21 fiches et images initiales publiées dans le dépôt peuvent être consultées par toute personne qui accède au site. Les ajouts effectués ensuite restent dans le navigateur et ne sont pas envoyés sur GitHub.
+
+Dans le site, le bouton **Sauvegarder** télécharge un fichier contenant les fiches, les souhaits et les photos ajoutées. Le bouton **Restaurer** permet de récupérer ce fichier, y compris sur un autre navigateur. Conservez régulièrement cette sauvegarde : les données du navigateur peuvent être effacées, et elles ne sont pas synchronisées automatiquement entre appareils ni avec les autres versions du carnet.
+
+Après modification du code, exécutez `npm run build:pages`, puis committez et poussez les fichiers actualisés, y compris `docs/` : GitHub Pages publiera la nouvelle version.
+
 ## Lancer le site
 
 Dans le Terminal :
