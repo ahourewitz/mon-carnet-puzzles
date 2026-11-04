@@ -1,6 +1,7 @@
 import seed from "../db/seed.json";
 import { puzzleInput, type Puzzle } from "./puzzle";
 import type { BrowserStorage } from "./storage-types";
+import { SEED_REVISION,seedIdsAddedAfter } from "./seed-updates";
 
 type ImageRecord = { id: string; blob: Blob };
 type Backup = { format: "puzzlotheque"; version: 1; exportedAt: string; puzzles: Puzzle[]; images: { id: string; data: string }[] };
@@ -28,7 +29,7 @@ function friendlyError(error: unknown): Error {
 function openDatabase(): Promise<IDBDatabase> {
   if(database)return database;
   database=new Promise<IDBDatabase>((resolve,reject)=>{
-    const open=indexedDB.open("puzzlotheque-personnelle",2);
+    const open=indexedDB.open("puzzlotheque-personnelle",SEED_REVISION);
     open.onupgradeneeded=(event)=>{
       const db=open.result, isNew=event.oldVersion===0;
       const puzzles=isNew?db.createObjectStore("puzzles",{keyPath:"id"}):open.transaction!.objectStore("puzzles");
@@ -40,8 +41,8 @@ function openDatabase(): Promise<IDBDatabase> {
       });
       if(isNew){
         for(const puzzle of initial)puzzles.add(puzzle);
-      }else if(event.oldVersion<2){
-        const updateIds=new Set(["pdf-22","pdf-23","pdf-24","pdf-25","pdf-26"]);
+      }else if(event.oldVersion<SEED_REVISION){
+        const updateIds=seedIdsAddedAfter(event.oldVersion);
         const existing=puzzles.getAll();
         existing.onsuccess=()=>{
           const rows=existing.result as Puzzle[];
