@@ -1,7 +1,7 @@
 import seed from "../db/seed.json";
 import { puzzleInput, type Puzzle } from "./puzzle";
 import type { BrowserStorage } from "./storage-types";
-import { SEED_REVISION,seedIdsAddedAfter } from "./seed-updates";
+import { SEED_REVISION,seedIdsAddedAfter,seedCompletionIdsUpdatedAfter } from "./seed-updates";
 
 type ImageRecord = { id: string; blob: Blob };
 type Backup = { format: "puzzlotheque"; version: 1; exportedAt: string; puzzles: Puzzle[]; images: { id: string; data: string }[] };
@@ -43,6 +43,7 @@ function openDatabase(): Promise<IDBDatabase> {
         for(const puzzle of initial)puzzles.add(puzzle);
       }else if(event.oldVersion<SEED_REVISION){
         const updateIds=seedIdsAddedAfter(event.oldVersion);
+        const completionIds=seedCompletionIdsUpdatedAfter(event.oldVersion);
         const existing=puzzles.getAll();
         existing.onsuccess=()=>{
           const rows=existing.result as Puzzle[];
@@ -54,10 +55,25 @@ function openDatabase(): Promise<IDBDatabase> {
             const key=`${normalized(puzzle.title)}\u0000${normalized(puzzle.brand)}`;
             for(const row of rows){
               if(row.collectionType==="wishlist"&&`${normalized(row.title)}\u0000${normalized(row.brand)}`===key){
-                puzzles.put({...row,collectionType:"owned",updatedAt:now});
+                Object.assign(row,{collectionType:"owned",updatedAt:now});
+                puzzles.put(row);
               }
             }
             if(!ids.has(puzzle.id)&&!keys.has(key)){puzzles.add(puzzle);keys.add(key);}
+          }
+          for(const reference of initial){
+            if(!completionIds.has(reference.id))continue;
+            const direct=rows.find(row=>row.id===reference.id&&row.collectionType==="owned");
+            const matches=direct?[direct]:rows.filter(row=>row.collectionType==="owned"&&normalized(row.title)===normalized(reference.title)&&normalized(row.brand)===normalized(reference.brand));
+            if(matches.length!==1)continue;
+            const row=matches[0];
+            // A date already recorded to the day in the same month is more precise than the PDF.
+            const precise=row.status==="done"&&row.datePrecision==="day"&&row.completionDate?.startsWith(`${reference.completionDate}-`);
+            const completionDate=precise?row.completionDate:reference.completionDate;
+            const datePrecision=precise?"day":reference.datePrecision;
+            if(row.status!=="done"||row.completionDate!==completionDate||row.datePrecision!==datePrecision){
+              puzzles.put({...row,status:"done",completionDate,datePrecision,updatedAt:now});
+            }
           }
         };
       }
