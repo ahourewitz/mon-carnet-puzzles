@@ -4,7 +4,7 @@ import { getDb } from "../db";
 import { collections,puzzles } from "../db/schema";
 import seed from "../db/seed.json";
 import type { Puzzle } from "./puzzle";
-import { SEED_REVISION,seedIdsAddedAfter,seedCompletionIdsUpdatedAfter } from "./seed-updates";
+import { SEED_REVISION,seedIdsAddedAfter,seedCompletionIdsUpdatedAfter,seedRemovalsAfter } from "./seed-updates";
 export async function readCollection(ownerId:string):Promise<Puzzle[]>{
   const db=getDb();
   const initialized=await db.select().from(collections).where(eq(collections.ownerId,ownerId)).get();
@@ -25,6 +25,16 @@ export async function readCollection(ownerId:string):Promise<Puzzle[]>{
       for(const p of seed.filter(item=>completionIds.has(item.id))){
         // Update only the requested status and date; keep photos, notes and precise dates.
         statements.push(binding.prepare("UPDATE puzzles SET status='done',completion_date=CASE WHEN status='done' AND date_precision='day' AND substr(completion_date,1,7)=? THEN completion_date ELSE ? END,date_precision=CASE WHEN status='done' AND date_precision='day' AND substr(completion_date,1,7)=? THEN 'day' ELSE ? END,updated_at=? WHERE owner_id=? AND collection_type='owned' AND EXISTS (SELECT 1 FROM collections WHERE owner_id=? AND seed_revision<?) AND (id=? OR (NOT EXISTS (SELECT 1 FROM puzzles WHERE owner_id=? AND id=? AND collection_type='owned') AND lower(trim(title))=lower(trim(?)) AND lower(trim(brand))=lower(trim(?)) AND 1=(SELECT count(*) FROM puzzles WHERE owner_id=? AND collection_type='owned' AND lower(trim(title))=lower(trim(?)) AND lower(trim(brand))=lower(trim(?))))) AND NOT (status='done' AND ((date_precision='month' AND completion_date IS ?) OR (date_precision='day' AND substr(completion_date,1,7) IS ?)))").bind(p.completionDate,p.completionDate,p.completionDate,p.datePrecision,now,ownerId,ownerId,SEED_REVISION,p.id,ownerId,p.id,p.title,p.brand,ownerId,p.title,p.brand,p.completionDate,p.completionDate));
+      }
+      const removals=seedRemovalsAfter(initialized.seedRevision);
+      if(removals.length){
+        const predicate=removals.map(()=>"(id=? OR (collection_type='owned' AND lower(trim(title))=lower(trim(?)) AND lower(trim(brand))=lower(trim(?))))").join(" OR ");
+        const matchValues=removals.flatMap(item=>[item.id,item.title,item.brand]);
+        const where=`owner_id=? AND (${predicate}) AND EXISTS (SELECT 1 FROM collections WHERE owner_id=? AND seed_revision<?)`;
+        // Save the complete record before removing it from the visible collection.
+        statements.push(binding.prepare("CREATE TABLE IF NOT EXISTS puzzle_removed_archive (owner_id TEXT NOT NULL,puzzle_id TEXT NOT NULL,removed_in_revision INTEGER NOT NULL,archived_at TEXT NOT NULL,data_json TEXT NOT NULL,PRIMARY KEY(owner_id,puzzle_id,removed_in_revision))"));
+        statements.push(binding.prepare(`INSERT OR IGNORE INTO puzzle_removed_archive (owner_id,puzzle_id,removed_in_revision,archived_at,data_json) SELECT owner_id,id,?,?,json_object('id',id,'title',title,'brand',brand,'author',author,'piecesLabel',pieces_label,'piecesTotal',pieces_total,'status',status,'completionDate',completion_date,'collectionType',collection_type,'datePrecision',date_precision,'purchasedAt',purchased_at,'imageUrl',image_url,'notes',notes,'createdAt',created_at,'updatedAt',updated_at) FROM puzzles WHERE ${where}`).bind(SEED_REVISION,now,ownerId,...matchValues,ownerId,SEED_REVISION));
+        statements.push(binding.prepare(`DELETE FROM puzzles WHERE ${where}`).bind(ownerId,...matchValues,ownerId,SEED_REVISION));
       }
     }
     statements.push(binding.prepare("UPDATE collections SET seed_revision=? WHERE owner_id=? AND seed_revision<?").bind(SEED_REVISION,ownerId,SEED_REVISION));

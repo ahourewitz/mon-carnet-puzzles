@@ -1,7 +1,7 @@
 import seed from "../db/seed.json";
 import { puzzleInput, type Puzzle } from "./puzzle";
 import type { BrowserStorage } from "./storage-types";
-import { SEED_REVISION,seedIdsAddedAfter,seedCompletionIdsUpdatedAfter } from "./seed-updates";
+import { SEED_REVISION,seedIdsAddedAfter,seedCompletionIdsUpdatedAfter,seedRemovalsAfter } from "./seed-updates";
 
 type ImageRecord = { id: string; blob: Blob };
 type Backup = { format: "puzzlotheque"; version: 1; exportedAt: string; puzzles: Puzzle[]; images: { id: string; data: string }[] };
@@ -34,6 +34,7 @@ function openDatabase(): Promise<IDBDatabase> {
       const db=open.result, isNew=event.oldVersion===0;
       const puzzles=isNew?db.createObjectStore("puzzles",{keyPath:"id"}):open.transaction!.objectStore("puzzles");
       if(isNew)db.createObjectStore("images",{keyPath:"id"});
+      const removedPuzzles=db.objectStoreNames.contains("removed-puzzles")?open.transaction!.objectStore("removed-puzzles"):db.createObjectStore("removed-puzzles",{keyPath:"id"});
       const now=new Date().toISOString();
       const initial=seed.map(item=>{
         const {sourcePage: _source,sourceDocument: _document,...puzzle}=item;
@@ -44,6 +45,7 @@ function openDatabase(): Promise<IDBDatabase> {
       }else if(event.oldVersion<SEED_REVISION){
         const updateIds=seedIdsAddedAfter(event.oldVersion);
         const completionIds=seedCompletionIdsUpdatedAfter(event.oldVersion);
+        const removals=seedRemovalsAfter(event.oldVersion);
         const existing=puzzles.getAll();
         existing.onsuccess=()=>{
           const rows=existing.result as Puzzle[];
@@ -73,6 +75,14 @@ function openDatabase(): Promise<IDBDatabase> {
             const datePrecision=precise?"day":reference.datePrecision;
             if(row.status!=="done"||row.completionDate!==completionDate||row.datePrecision!==datePrecision){
               puzzles.put({...row,status:"done",completionDate,datePrecision,updatedAt:now});
+            }
+          }
+          for(const row of rows){
+            const removed=removals.some(item=>row.id===item.id||(row.collectionType==="owned"&&normalized(row.title)===normalized(item.title)&&normalized(row.brand)===normalized(item.brand)));
+            if(removed){
+              // Keep the original record and its image in the local database for recovery.
+              removedPuzzles.put({id:row.id,puzzle:row,removedAt:now,revision:SEED_REVISION});
+              puzzles.delete(row.id);
             }
           }
         };
