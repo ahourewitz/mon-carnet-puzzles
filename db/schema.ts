@@ -6,6 +6,7 @@ export const collections = sqliteTable("collections", {
 export const puzzles = sqliteTable("puzzles", {
   id: text("id").notNull(), ownerId: text("owner_id").notNull(),
   title: text("title").notNull(), brand: text("brand").notNull(), author: text("author"),
+  themes: text("themes", {mode:"json"}).$type<string[]>().notNull().default([]),
   piecesLabel: text("pieces_label").notNull(), piecesTotal: integer("pieces_total").notNull(),
   status: text("status").notNull().default("todo"), completionDate: text("completion_date"),
   collectionType: text("collection_type").notNull().default("owned"),

@@ -11,3 +11,18 @@
 /* Edition statique : outils de sauvegarde du navigateur. */
 .section-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.storage-note{margin:-8px 0 20px;color:#6c7469;font-size:10px;line-height:1.6}.restore-dialog{max-width:520px}.restore-content{padding:22px 30px 27px;font-size:11px;color:#536447;line-height:1.6}.restore-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}@media(max-width:600px){.section-actions{gap:6px}.section-actions .export-button{padding:8px}.section-actions .export-button svg{width:15px;height:15px}.storage-note{font-size:9px;margin-top:-9px}.restore-content{padding:20px}.restore-actions{gap:7px}.restore-actions .button{font-size:10px;white-space:normal;text-align:center}}
 .startup{max-width:620px;margin:15vh auto;padding:35px;color:var(--ink)}.startup h1{font:38px Georgia,serif}.startup p{line-height:1.7;color:var(--muted)}
+/* Themes in the collection and puzzle editor. */
+.card-themes{display:flex;flex-wrap:wrap;gap:5px;margin:-6px 0 15px}
+.theme-chip{display:inline-flex;align-items:center;border:1px solid #e9cfd4;border-radius:20px;background:#fcf1f3;color:#8a5963;padding:4px 8px;font-size:9px;line-height:1}
+.theme-field{border:0;padding:0;margin:2px 0 20px}
+.theme-field legend{color:#536447;font-size:11px;font-weight:600;margin-bottom:10px}
+.theme-field legend small{font-size:9px;font-weight:400;color:#8c927c;margin-left:6px}
+.theme-options{display:flex;flex-wrap:wrap;gap:7px}
+.theme-option{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid #e0e4d6;border-radius:20px;background:white;color:#66775b;font-size:10px;cursor:pointer}
+.theme-option.chosen{background:#f9eaee;border-color:#dcaeb9;color:#80515e}
+.theme-option input{accent-color:#ba7d8c;margin:0;width:13px;height:13px}
+.theme-option:focus-within{outline:2px solid #a77d87;outline-offset:2px}
+.theme-custom{display:flex;align-items:stretch;gap:8px;margin-top:10px}
+.theme-custom input{flex:1;min-width:0;border:1px solid #dce1d0;border-radius:6px;background:white;color:#30482f;padding:10px 12px;font-size:11px}
+.theme-custom .button{min-height:0;padding:8px 14px;font-size:10px}
+@media(max-width:600px){.secondary-controls .select-filters{flex-wrap:wrap}.theme-field legend small{display:block;margin:4px 0 0}}

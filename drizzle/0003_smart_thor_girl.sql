@@ -1,0 +1,1 @@
+ALTER TABLE `puzzles` ADD `themes` text DEFAULT '[]' NOT NULL;

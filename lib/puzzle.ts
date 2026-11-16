@@ -1,6 +1,6 @@
 import { z } from "zod";
 export type Puzzle = {
-  id: string; title: string; brand: string; author: string | null;
+  id: string; title: string; brand: string; author: string | null; themes: string[];
   piecesLabel: string; piecesTotal: number; status: "todo" | "done"; collectionType:"owned"|"wishlist";
   completionDate: string | null; datePrecision: "day" | "month" | "unknown";
   purchasedAt: string | null; imageUrl: string | null; notes: string;
@@ -22,6 +22,7 @@ export const puzzleInput=z.object({
   title:z.string().trim().min(1,"Ajoutez un nom au puzzle.").max(180),
   brand:z.string().trim().min(1,"Indiquez la marque.").max(80),
   author:z.string().trim().max(120).nullable(),
+  themes:z.array(z.string().trim().min(1).max(50)).max(12).default([]),
   piecesLabel:z.string().trim().min(1).max(40),piecesTotal:z.number().int().min(1).max(100000),
   status:z.enum(["todo","done"]),completionDate:z.string().nullable(),
   collectionType:z.enum(["owned","wishlist"]).default("owned"),

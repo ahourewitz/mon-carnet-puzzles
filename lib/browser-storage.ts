@@ -2,6 +2,7 @@ import seed from "../db/seed.json";
 import { puzzleInput, type Puzzle } from "./puzzle";
 import type { BrowserStorage } from "./storage-types";
 import { SEED_REVISION,seedIdsAddedAfter,seedCompletionIdsUpdatedAfter,seedRemovalsAfter } from "./seed-updates";
+import { seedThemesFor } from "./themes";
 
 type ImageRecord = { id: string; blob: Blob };
 type Backup = { format: "puzzlotheque"; version: 1; exportedAt: string; puzzles: Puzzle[]; images: { id: string; data: string }[] };
@@ -74,7 +75,16 @@ function openDatabase(): Promise<IDBDatabase> {
             const completionDate=precise?row.completionDate:reference.completionDate;
             const datePrecision=precise?"day":reference.datePrecision;
             if(row.status!=="done"||row.completionDate!==completionDate||row.datePrecision!==datePrecision){
-              puzzles.put({...row,status:"done",completionDate,datePrecision,updatedAt:now});
+              Object.assign(row,{status:"done",completionDate,datePrecision,updatedAt:now});
+              puzzles.put(row);
+            }
+          }
+          if(event.oldVersion<7){
+            for(const row of rows){
+              if(!Array.isArray(row.themes)){
+                row.themes=seedThemesFor(row);
+                puzzles.put(row);
+              }
             }
           }
           for(const row of rows){
@@ -203,7 +213,7 @@ export class LocalPuzzleStorage implements BrowserStorage {
         ids.add(p.id);
         const image=p.imageUrl;
         if(image!==null&&!(typeof image==="string"&&(SEED_IMAGE.test(image)||(image.startsWith(IMAGE_PREFIX)&&imageSet.has(image.slice(IMAGE_PREFIX.length))))))throw new Error("Il manque une photo dans la sauvegarde.");
-        return validatePuzzle(p,image);
+        return validatePuzzle(Array.isArray(p.themes)?p:{...p,themes:seedThemesFor(p)},image);
       });
       const db=await openDatabase(),tx=db.transaction(["puzzles","images"],"readwrite"),done=finished(tx);
       const pStore=tx.objectStore("puzzles"),iStore=tx.objectStore("images");

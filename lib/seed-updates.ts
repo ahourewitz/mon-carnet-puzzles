@@ -1,6 +1,6 @@
 // Keep these revisions aligned with the browser database version. They let an
 // older collection receive only new additions, without restoring deleted items.
-export const SEED_REVISION = 6;
+export const SEED_REVISION = 7;
 
 const additions = [
   { revision: 2, first: 22, last: 26 },

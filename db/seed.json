@@ -12,7 +12,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/01.webp",
     "notes": "",
-    "sourcePage": 1
+    "sourcePage": 1,
+    "themes": []
   },
   {
     "id": "pdf-02",
@@ -27,7 +28,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/02.webp",
     "notes": "",
-    "sourcePage": 1
+    "sourcePage": 1,
+    "themes": []
   },
   {
     "id": "pdf-03",
@@ -42,7 +44,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/03.webp",
     "notes": "",
-    "sourcePage": 2
+    "sourcePage": 2,
+    "themes": []
   },
   {
     "id": "pdf-04",
@@ -57,7 +60,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/04.webp",
     "notes": "",
-    "sourcePage": 2
+    "sourcePage": 2,
+    "themes": []
   },
   {
     "id": "pdf-05",
@@ -72,7 +76,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/05.webp",
     "notes": "",
-    "sourcePage": 3
+    "sourcePage": 3,
+    "themes": []
   },
   {
     "id": "pdf-06",
@@ -87,7 +92,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/06.webp",
     "notes": "",
-    "sourcePage": 3
+    "sourcePage": 3,
+    "themes": []
   },
   {
     "id": "pdf-07",
@@ -102,7 +108,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/07.webp",
     "notes": "",
-    "sourcePage": 4
+    "sourcePage": 4,
+    "themes": []
   },
   {
     "id": "pdf-08",
@@ -117,7 +124,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/08.webp",
     "notes": "",
-    "sourcePage": 4
+    "sourcePage": 4,
+    "themes": []
   },
   {
     "id": "pdf-09",
@@ -132,7 +140,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/09.webp",
     "notes": "",
-    "sourcePage": 5
+    "sourcePage": 5,
+    "themes": []
   },
   {
     "id": "pdf-10",
@@ -147,7 +156,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/10.webp",
     "notes": "",
-    "sourcePage": 5
+    "sourcePage": 5,
+    "themes": []
   },
   {
     "id": "pdf-11",
@@ -162,7 +172,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/11.webp",
     "notes": "",
-    "sourcePage": 6
+    "sourcePage": 6,
+    "themes": []
   },
   {
     "id": "pdf-13",
@@ -177,7 +188,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/13.webp",
     "notes": "",
-    "sourcePage": 7
+    "sourcePage": 7,
+    "themes": []
   },
   {
     "id": "pdf-14",
@@ -192,7 +204,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/14.webp",
     "notes": "",
-    "sourcePage": 7
+    "sourcePage": 7,
+    "themes": []
   },
   {
     "id": "pdf-19",
@@ -207,7 +220,8 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/19.webp",
     "notes": "",
-    "sourcePage": 10
+    "sourcePage": 10,
+    "themes": []
   },
   {
     "id": "pdf-21",
@@ -222,7 +236,10 @@
     "purchasedAt": null,
     "imageUrl": "/puzzles/21.webp",
     "notes": "",
-    "sourcePage": 11
+    "sourcePage": 11,
+    "themes": [
+      "Été"
+    ]
   },
   {
     "id": "pdf-22",
@@ -238,7 +255,8 @@
     "imageUrl": "/puzzles/22.webp",
     "notes": "",
     "sourcePage": 1,
-    "sourceDocument": "Présentation sans titre-2.pdf"
+    "sourceDocument": "Présentation sans titre-2.pdf",
+    "themes": []
   },
   {
     "id": "pdf-23",
@@ -254,7 +272,8 @@
     "imageUrl": "/puzzles/23.webp",
     "notes": "",
     "sourcePage": 1,
-    "sourceDocument": "Présentation sans titre-2.pdf"
+    "sourceDocument": "Présentation sans titre-2.pdf",
+    "themes": []
   },
   {
     "id": "pdf-24",
@@ -270,7 +289,10 @@
     "imageUrl": "/puzzles/24.webp",
     "notes": "",
     "sourcePage": 2,
-    "sourceDocument": "Présentation sans titre-2.pdf"
+    "sourceDocument": "Présentation sans titre-2.pdf",
+    "themes": [
+      "Hiver"
+    ]
   },
   {
     "id": "pdf-25",
@@ -286,7 +308,10 @@
     "imageUrl": "/puzzles/25.webp",
     "notes": "",
     "sourcePage": 2,
-    "sourceDocument": "Présentation sans titre-2.pdf"
+    "sourceDocument": "Présentation sans titre-2.pdf",
+    "themes": [
+      "Été"
+    ]
   },
   {
     "id": "pdf-26",
@@ -302,7 +327,10 @@
     "imageUrl": "/puzzles/26.webp",
     "notes": "",
     "sourcePage": 3,
-    "sourceDocument": "Présentation sans titre-2.pdf"
+    "sourceDocument": "Présentation sans titre-2.pdf",
+    "themes": [
+      "Noël"
+    ]
   },
   {
     "id": "pdf-27",
@@ -318,7 +346,10 @@
     "imageUrl": "/puzzles/27.webp",
     "notes": "",
     "sourcePage": 1,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Halloween"
+    ]
   },
   {
     "id": "pdf-28",
@@ -334,7 +365,10 @@
     "imageUrl": "/puzzles/28.webp",
     "notes": "",
     "sourcePage": 1,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Printemps"
+    ]
   },
   {
     "id": "pdf-29",
@@ -350,7 +384,10 @@
     "imageUrl": "/puzzles/29.webp",
     "notes": "",
     "sourcePage": 2,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Halloween"
+    ]
   },
   {
     "id": "pdf-30",
@@ -366,7 +403,10 @@
     "imageUrl": "/puzzles/30.webp",
     "notes": "",
     "sourcePage": 2,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Halloween"
+    ]
   },
   {
     "id": "pdf-31",
@@ -382,7 +422,10 @@
     "imageUrl": "/puzzles/31.webp",
     "notes": "",
     "sourcePage": 3,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Toute l’année"
+    ]
   },
   {
     "id": "pdf-32",
@@ -398,7 +441,10 @@
     "imageUrl": "/puzzles/32.webp",
     "notes": "",
     "sourcePage": 3,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Noël"
+    ]
   },
   {
     "id": "pdf-33",
@@ -414,7 +460,10 @@
     "imageUrl": "/puzzles/33.webp",
     "notes": "",
     "sourcePage": 4,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Halloween"
+    ]
   },
   {
     "id": "pdf-34",
@@ -430,7 +479,10 @@
     "imageUrl": "/puzzles/34.webp",
     "notes": "",
     "sourcePage": 4,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Hiver"
+    ]
   },
   {
     "id": "pdf-35",
@@ -446,7 +498,10 @@
     "imageUrl": "/puzzles/35.webp",
     "notes": "",
     "sourcePage": 5,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Chandeleur"
+    ]
   },
   {
     "id": "pdf-36",
@@ -462,7 +517,10 @@
     "imageUrl": "/puzzles/36.webp",
     "notes": "",
     "sourcePage": 5,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Pâques"
+    ]
   },
   {
     "id": "pdf-37",
@@ -478,7 +536,10 @@
     "imageUrl": "/puzzles/37.webp",
     "notes": "",
     "sourcePage": 6,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Noël"
+    ]
   },
   {
     "id": "pdf-38",
@@ -494,7 +555,10 @@
     "imageUrl": "/puzzles/38.webp",
     "notes": "",
     "sourcePage": 6,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Toute l’année"
+    ]
   },
   {
     "id": "pdf-39",
@@ -510,7 +574,11 @@
     "imageUrl": "/puzzles/39.webp",
     "notes": "",
     "sourcePage": 7,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Hiver",
+      "Printemps"
+    ]
   },
   {
     "id": "pdf-40",
@@ -526,7 +594,10 @@
     "imageUrl": "/puzzles/40.webp",
     "notes": "",
     "sourcePage": 7,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Hiver"
+    ]
   },
   {
     "id": "pdf-41",
@@ -542,7 +613,8 @@
     "imageUrl": "/puzzles/41.webp",
     "notes": "",
     "sourcePage": 8,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": []
   },
   {
     "id": "pdf-42",
@@ -558,7 +630,10 @@
     "imageUrl": "/puzzles/42.webp",
     "notes": "",
     "sourcePage": 8,
-    "sourceDocument": "Puzzle liste.pdf"
+    "sourceDocument": "Puzzle liste.pdf",
+    "themes": [
+      "Noël"
+    ]
   },
   {
     "id": "pdf-43",
@@ -574,7 +649,10 @@
     "imageUrl": "/puzzles/43.webp",
     "notes": "",
     "sourcePage": 21,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Automne"
+    ]
   },
   {
     "id": "pdf-44",
@@ -590,7 +668,10 @@
     "imageUrl": "/puzzles/44.webp",
     "notes": "",
     "sourcePage": 21,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Noël"
+    ]
   },
   {
     "id": "pdf-45",
@@ -606,7 +687,10 @@
     "imageUrl": "/puzzles/45.webp",
     "notes": "",
     "sourcePage": 22,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Printemps"
+    ]
   },
   {
     "id": "pdf-46",
@@ -622,7 +706,10 @@
     "imageUrl": "/puzzles/46.webp",
     "notes": "",
     "sourcePage": 22,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Noël"
+    ]
   },
   {
     "id": "pdf-47",
@@ -638,7 +725,10 @@
     "imageUrl": "/puzzles/47.webp",
     "notes": "",
     "sourcePage": 23,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Noël"
+    ]
   },
   {
     "id": "pdf-48",
@@ -654,7 +744,10 @@
     "imageUrl": "/puzzles/48.webp",
     "notes": "",
     "sourcePage": 23,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Printemps"
+    ]
   },
   {
     "id": "pdf-49",
@@ -670,7 +763,10 @@
     "imageUrl": "/puzzles/49.webp",
     "notes": "",
     "sourcePage": 24,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Printemps"
+    ]
   },
   {
     "id": "pdf-50",
@@ -686,7 +782,10 @@
     "imageUrl": "/puzzles/50.webp",
     "notes": "",
     "sourcePage": 24,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Toute l’année"
+    ]
   },
   {
     "id": "pdf-51",
@@ -702,7 +801,10 @@
     "imageUrl": "/puzzles/51.webp",
     "notes": "",
     "sourcePage": 25,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Chandeleur"
+    ]
   },
   {
     "id": "pdf-52",
@@ -718,7 +820,10 @@
     "imageUrl": "/puzzles/52.webp",
     "notes": "",
     "sourcePage": 25,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Automne"
+    ]
   },
   {
     "id": "pdf-53",
@@ -734,7 +839,10 @@
     "imageUrl": "/puzzles/53.webp",
     "notes": "",
     "sourcePage": 26,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Toute l’année"
+    ]
   },
   {
     "id": "pdf-54",
@@ -750,7 +858,10 @@
     "imageUrl": "/puzzles/54.webp",
     "notes": "",
     "sourcePage": 26,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Toute l’année"
+    ]
   },
   {
     "id": "pdf-55",
@@ -766,7 +877,10 @@
     "imageUrl": "/puzzles/55.webp",
     "notes": "",
     "sourcePage": 27,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Été"
+    ]
   },
   {
     "id": "pdf-56",
@@ -782,7 +896,10 @@
     "imageUrl": "/puzzles/56.webp",
     "notes": "",
     "sourcePage": 27,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Halloween"
+    ]
   },
   {
     "id": "pdf-57",
@@ -798,7 +915,10 @@
     "imageUrl": "/puzzles/57.webp",
     "notes": "",
     "sourcePage": 28,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Printemps"
+    ]
   },
   {
     "id": "pdf-58",
@@ -814,7 +934,10 @@
     "imageUrl": "/puzzles/58.webp",
     "notes": "",
     "sourcePage": 28,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Printemps"
+    ]
   },
   {
     "id": "pdf-59",
@@ -830,7 +953,10 @@
     "imageUrl": "/puzzles/59.webp",
     "notes": "",
     "sourcePage": 29,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Été"
+    ]
   },
   {
     "id": "pdf-60",
@@ -846,7 +972,10 @@
     "imageUrl": "/puzzles/60.webp",
     "notes": "",
     "sourcePage": 29,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Automne"
+    ]
   },
   {
     "id": "pdf-61",
@@ -862,7 +991,10 @@
     "imageUrl": "/puzzles/61.webp",
     "notes": "",
     "sourcePage": 30,
-    "sourceDocument": "Puzzle liste-3.pdf"
+    "sourceDocument": "Puzzle liste-3.pdf",
+    "themes": [
+      "Halloween"
+    ]
   },
   {
     "id": "pdf-62",
@@ -878,7 +1010,10 @@
     "imageUrl": "/puzzles/62.webp",
     "notes": "",
     "sourcePage": 30,
-    "sourceDocument": "Puzzle liste-4.pdf"
+    "sourceDocument": "Puzzle liste-4.pdf",
+    "themes": [
+      "Hiver"
+    ]
   },
   {
     "id": "pdf-63",
@@ -894,7 +1029,10 @@
     "imageUrl": "/puzzles/63.webp",
     "notes": "",
     "sourcePage": 31,
-    "sourceDocument": "Puzzle liste-4.pdf"
+    "sourceDocument": "Puzzle liste-4.pdf",
+    "themes": [
+      "Hiver"
+    ]
   },
   {
     "id": "pdf-64",
@@ -910,7 +1048,10 @@
     "imageUrl": "/puzzles/64.webp",
     "notes": "",
     "sourcePage": 31,
-    "sourceDocument": "Puzzle liste-4.pdf"
+    "sourceDocument": "Puzzle liste-4.pdf",
+    "themes": [
+      "Hiver"
+    ]
   },
   {
     "id": "pdf-65",
@@ -926,7 +1067,10 @@
     "imageUrl": "/puzzles/65.webp",
     "notes": "",
     "sourcePage": 32,
-    "sourceDocument": "Puzzle liste-4.pdf"
+    "sourceDocument": "Puzzle liste-4.pdf",
+    "themes": [
+      "Hiver"
+    ]
   },
   {
     "id": "pdf-66",
@@ -942,6 +1086,9 @@
     "imageUrl": "/puzzles/66.webp",
     "notes": "",
     "sourcePage": 32,
-    "sourceDocument": "Puzzle liste-4.pdf"
+    "sourceDocument": "Puzzle liste-4.pdf",
+    "themes": [
+      "Été"
+    ]
   }
 ]

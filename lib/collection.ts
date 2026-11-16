@@ -18,9 +18,15 @@ export async function readCollection(ownerId:string):Promise<Puzzle[]>{
       // A matching wish has now been purchased; retain its other details.
       statements.push(binding.prepare("UPDATE puzzles SET collection_type='owned',updated_at=? WHERE owner_id=? AND collection_type='wishlist' AND lower(trim(title))=lower(trim(?)) AND lower(trim(brand))=lower(trim(?)) AND EXISTS (SELECT 1 FROM collections WHERE owner_id=? AND seed_revision<?)").bind(now,ownerId,p.title,p.brand,ownerId,SEED_REVISION));
       // Only add a missing title once. Existing user edits and deletions are not replaced.
-      statements.push(binding.prepare("INSERT OR IGNORE INTO puzzles (id,owner_id,title,brand,author,pieces_label,pieces_total,status,completion_date,date_precision,purchased_at,image_url,notes,created_at,updated_at) SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,?,? WHERE EXISTS (SELECT 1 FROM collections WHERE owner_id=? AND seed_revision<?) AND NOT EXISTS (SELECT 1 FROM puzzles WHERE owner_id=? AND lower(trim(title))=lower(trim(?)) AND lower(trim(brand))=lower(trim(?)))").bind(p.id,ownerId,p.title,p.brand,p.author,p.piecesLabel,p.piecesTotal,p.status,p.completionDate,p.datePrecision,p.purchasedAt,p.imageUrl,p.notes,now,now,ownerId,SEED_REVISION,ownerId,p.title,p.brand));
+      statements.push(binding.prepare("INSERT OR IGNORE INTO puzzles (id,owner_id,title,brand,author,themes,pieces_label,pieces_total,status,completion_date,date_precision,purchased_at,image_url,notes,created_at,updated_at) SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? WHERE EXISTS (SELECT 1 FROM collections WHERE owner_id=? AND seed_revision<?) AND NOT EXISTS (SELECT 1 FROM puzzles WHERE owner_id=? AND lower(trim(title))=lower(trim(?)) AND lower(trim(brand))=lower(trim(?)))").bind(p.id,ownerId,p.title,p.brand,p.author,JSON.stringify(p.themes),p.piecesLabel,p.piecesTotal,p.status,p.completionDate,p.datePrecision,p.purchasedAt,p.imageUrl,p.notes,now,now,ownerId,SEED_REVISION,ownerId,p.title,p.brand));
     }
     if(initialized){
+      if(initialized.seedRevision<7){
+        for(const p of seed.filter(item=>item.themes.length)){
+          // Fill only previously empty themes; do not replace personal categorisation.
+          statements.push(binding.prepare("UPDATE puzzles SET themes=? WHERE owner_id=? AND themes='[]' AND EXISTS (SELECT 1 FROM collections WHERE owner_id=? AND seed_revision<7) AND (id=? OR (NOT EXISTS (SELECT 1 FROM puzzles WHERE owner_id=? AND id=?) AND lower(trim(title))=lower(trim(?)) AND lower(trim(brand))=lower(trim(?)) AND 1=(SELECT count(*) FROM puzzles WHERE owner_id=? AND lower(trim(title))=lower(trim(?)) AND lower(trim(brand))=lower(trim(?)))))").bind(JSON.stringify(p.themes),ownerId,ownerId,p.id,ownerId,p.id,p.title,p.brand,ownerId,p.title,p.brand));
+        }
+      }
       const completionIds=seedCompletionIdsUpdatedAfter(initialized.seedRevision);
       for(const p of seed.filter(item=>completionIds.has(item.id))){
         // Update only the requested status and date; keep photos, notes and precise dates.
