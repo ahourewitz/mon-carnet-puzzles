@@ -1090,5 +1090,62 @@
     "themes": [
       "Été"
     ]
+  },
+  {
+    "id": "pdf-67",
+    "title": "Fall in Brooklyn",
+    "brand": "Eeboo",
+    "author": "Laura El",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/67.webp",
+    "notes": "",
+    "sourcePage": 33,
+    "sourceDocument": "Puzzle liste-6.pdf"
+  },
+  {
+    "id": "pdf-68",
+    "title": "Spy Guy - USA",
+    "brand": "Trefl",
+    "author": "KAZSTUDIO SA",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/68.webp",
+    "notes": "",
+    "sourcePage": 33,
+    "sourceDocument": "Puzzle liste-6.pdf"
+  },
+  {
+    "id": "pdf-69",
+    "title": "Spy Guy - Europe",
+    "brand": "Trefl",
+    "author": "KAZSTUDIO SA",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/69.webp",
+    "notes": "",
+    "sourcePage": 34,
+    "sourceDocument": "Puzzle liste-6.pdf"
   }
 ]

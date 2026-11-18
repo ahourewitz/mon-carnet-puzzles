@@ -57,8 +57,13 @@ function openDatabase(): Promise<IDBDatabase> {
             if(!updateIds.has(puzzle.id))continue;
             const key=`${normalized(puzzle.title)}\u0000${normalized(puzzle.brand)}`;
             for(const row of rows){
-              if(row.collectionType==="wishlist"&&`${normalized(row.title)}\u0000${normalized(row.brand)}`===key){
-                Object.assign(row,{collectionType:"owned",updatedAt:now});
+              if(row.id===puzzle.id||`${normalized(row.title)}\u0000${normalized(row.brand)}`===key){
+                const merged=[...(row.themes||[])];
+                for(const theme of puzzle.themes){
+                  if(merged.length<12&&!merged.some(item=>normalized(item)===normalized(theme)))merged.push(theme);
+                }
+                if(row.collectionType!=="wishlist"&&Array.isArray(row.themes)&&merged.length===row.themes.length)continue;
+                Object.assign(row,{themes:merged,...(row.collectionType==="wishlist"?{collectionType:"owned"}:{ }),updatedAt:now});
                 puzzles.put(row);
               }
             }
