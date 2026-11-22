@@ -434,9 +434,9 @@
     "author": "Juan & Yuan",
     "piecesLabel": "1000",
     "piecesTotal": 1000,
-    "status": "todo",
-    "completionDate": null,
-    "datePrecision": "unknown",
+    "status": "done",
+    "completionDate": "2026-11",
+    "datePrecision": "month",
     "purchasedAt": null,
     "imageUrl": "/puzzles/32.webp",
     "notes": "",
@@ -548,9 +548,9 @@
     "author": "Sara Romero",
     "piecesLabel": "1000",
     "piecesTotal": 1000,
-    "status": "todo",
-    "completionDate": null,
-    "datePrecision": "unknown",
+    "status": "done",
+    "completionDate": "2026-11",
+    "datePrecision": "month",
     "purchasedAt": null,
     "imageUrl": "/puzzles/38.webp",
     "notes": "",
@@ -1147,5 +1147,121 @@
     "notes": "",
     "sourcePage": 34,
     "sourceDocument": "Puzzle liste-6.pdf"
+  },
+  {
+    "id": "pdf-70",
+    "title": "West 78th Street",
+    "brand": "La Pauz",
+    "author": "Laura El",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/70.webp",
+    "notes": "",
+    "sourcePage": 34,
+    "sourceDocument": "Puzzle liste-7.pdf"
+  },
+  {
+    "id": "pdf-71",
+    "title": "Books & Baked Goods",
+    "brand": "Reverie Puzzle",
+    "author": "Sandra Tews",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/71.webp",
+    "notes": "",
+    "sourcePage": 35,
+    "sourceDocument": "Puzzle liste-7.pdf"
+  },
+  {
+    "id": "pdf-72",
+    "title": "Autumn Festival",
+    "brand": "La Pauz",
+    "author": "Rachel Corcoran",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/72.webp",
+    "notes": "",
+    "sourcePage": 35,
+    "sourceDocument": "Puzzle liste-7.pdf"
+  },
+  {
+    "id": "pdf-73",
+    "title": "Dashing all the way",
+    "brand": "Galison",
+    "author": "Sandra Tews",
+    "themes": [
+      "Hiver"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/73.webp",
+    "notes": "",
+    "sourcePage": 36,
+    "sourceDocument": "Puzzle liste-7.pdf"
+  },
+  {
+    "id": "pdf-74",
+    "title": "Captivated",
+    "brand": "Elewhite",
+    "author": "Juan & Yuan",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/74.webp",
+    "notes": "",
+    "sourcePage": 36,
+    "sourceDocument": "Puzzle liste-7.pdf"
+  },
+  {
+    "id": "pdf-75",
+    "title": "The Gilded Spine",
+    "brand": "Galison",
+    "author": "Sally Wilson",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/75.webp",
+    "notes": "",
+    "sourcePage": 37,
+    "sourceDocument": "Puzzle liste-7.pdf"
   }
 ]

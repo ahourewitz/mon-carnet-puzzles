@@ -75,10 +75,10 @@ function openDatabase(): Promise<IDBDatabase> {
             const matches=direct?[direct]:rows.filter(row=>row.collectionType==="owned"&&normalized(row.title)===normalized(reference.title)&&normalized(row.brand)===normalized(reference.brand));
             if(matches.length!==1)continue;
             const row=matches[0];
-            // A date already recorded to the day in the same month is more precise than the PDF.
-            const precise=row.status==="done"&&row.datePrecision==="day"&&row.completionDate?.startsWith(`${reference.completionDate}-`);
-            const completionDate=precise?row.completionDate:reference.completionDate;
-            const datePrecision=precise?"day":reference.datePrecision;
+            // Keep a date already entered by the owner, even if it differs from the PDF.
+            const keepDate=row.status==="done"&&!!row.completionDate&&(row.datePrecision==="day"||row.datePrecision==="month");
+            const completionDate=keepDate?row.completionDate:reference.completionDate;
+            const datePrecision=keepDate?row.datePrecision:reference.datePrecision;
             if(row.status!=="done"||row.completionDate!==completionDate||row.datePrecision!==datePrecision){
               Object.assign(row,{status:"done",completionDate,datePrecision,updatedAt:now});
               puzzles.put(row);

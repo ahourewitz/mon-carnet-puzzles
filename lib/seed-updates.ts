@@ -1,6 +1,6 @@
 // Keep these revisions aligned with the browser database version. They let an
 // older collection receive only new additions, without restoring deleted items.
-export const SEED_REVISION = 8;
+export const SEED_REVISION = 9;
 
 const additions = [
   { revision: 2, first: 22, last: 26 },
@@ -8,6 +8,7 @@ const additions = [
   { revision: 5, first: 43, last: 61 },
   { revision: 6, first: 62, last: 66 },
   { revision: 8, first: 67, last: 69 },
+  { revision: 9, first: 70, last: 75 },
 ];
 
 export function seedIdsAddedAfter(revision: number): Set<string> {
@@ -24,6 +25,7 @@ export function seedIdsAddedAfter(revision: number): Set<string> {
 // Status changes are separate from additions so removed puzzles stay removed.
 const completionUpdates = [
   { revision: 4, ids: ["pdf-22", "pdf-23", "pdf-24", "pdf-26", "pdf-41"] },
+  { revision: 9, ids: ["pdf-32", "pdf-38"] },
 ];
 
 export function seedCompletionIdsUpdatedAfter(revision: number): Set<string> {
