@@ -3,13 +3,14 @@ import { puzzleInput, type Puzzle } from "./puzzle";
 import type { BrowserStorage } from "./storage-types";
 import { SEED_REVISION,seedIdsAddedAfter,seedCompletionIdsUpdatedAfter,seedRemovalsAfter } from "./seed-updates";
 import { seedThemesFor } from "./themes";
+import { brandKey } from "./brands";
 
 type ImageRecord = { id: string; blob: Blob };
 type Backup = { format: "puzzlotheque"; version: 1; exportedAt: string; puzzles: Puzzle[]; images: { id: string; data: string }[] };
 const IMAGE_PREFIX = "browser-image:";
 const IMAGE_ID = /^[a-f0-9-]{36}$/;
 const RECORD_ID = /^[a-zA-Z0-9_-]{1,120}$/;
-const SEED_IMAGE = /^\/puzzles\/\d{2}\.webp$/;
+const SEED_IMAGE = /^\/puzzles\/\d{2,6}\.webp$/;
 const MAX_IMAGE_SIZE = 8 * 1024 * 1024;
 const objectUrls = new Map<string,string>();
 const imageIds = new Map<string,string>();
@@ -51,13 +52,14 @@ function openDatabase(): Promise<IDBDatabase> {
         existing.onsuccess=()=>{
           const rows=existing.result as Puzzle[];
           const normalized=(s:string)=>s.normalize("NFC").trim().toLocaleLowerCase("fr");
-          const keys=new Set(rows.map(p=>`${normalized(p.title)}\u0000${normalized(p.brand)}`));
+          const identity=(p:{title:string;brand:string})=>`${normalized(p.title)}\u0000${brandKey(p.brand)}`;
+          const keys=new Set(rows.map(identity));
           const ids=new Set(rows.map(p=>p.id));
           for(const puzzle of initial){
             if(!updateIds.has(puzzle.id))continue;
-            const key=`${normalized(puzzle.title)}\u0000${normalized(puzzle.brand)}`;
+            const key=identity(puzzle);
             for(const row of rows){
-              if(row.id===puzzle.id||`${normalized(row.title)}\u0000${normalized(row.brand)}`===key){
+              if(row.id===puzzle.id||identity(row)===key){
                 const merged=[...(row.themes||[])];
                 for(const theme of puzzle.themes){
                   if(merged.length<12&&!merged.some(item=>normalized(item)===normalized(theme)))merged.push(theme);
@@ -72,7 +74,7 @@ function openDatabase(): Promise<IDBDatabase> {
           for(const reference of initial){
             if(!completionIds.has(reference.id))continue;
             const direct=rows.find(row=>row.id===reference.id&&row.collectionType==="owned");
-            const matches=direct?[direct]:rows.filter(row=>row.collectionType==="owned"&&normalized(row.title)===normalized(reference.title)&&normalized(row.brand)===normalized(reference.brand));
+            const matches=direct?[direct]:rows.filter(row=>row.collectionType==="owned"&&identity(row)===identity(reference));
             if(matches.length!==1)continue;
             const row=matches[0];
             // Keep a date already entered by the owner, even if it differs from the PDF.

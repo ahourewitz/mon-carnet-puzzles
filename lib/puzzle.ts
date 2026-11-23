@@ -27,7 +27,7 @@ export const puzzleInput=z.object({
   status:z.enum(["todo","done"]),completionDate:z.string().nullable(),
   collectionType:z.enum(["owned","wishlist"]).default("owned"),
   datePrecision:z.enum(["day","month","unknown"]),purchasedAt:z.string().nullable(),
-  imageUrl:z.string().max(200).regex(/^\/(?:puzzles\/\d{2}\.webp|api\/images\/[a-f0-9-]{36})$/).nullable(),
+  imageUrl:z.string().max(200).regex(/^\/(?:puzzles\/\d{2,6}\.webp|api\/images\/[a-f0-9-]{36})$/).nullable(),
   notes:z.string().trim().max(2000),
 }).superRefine((p,ctx)=>{
   if(countPieces(p.piecesLabel)!==p.piecesTotal)ctx.addIssue({code:"custom",message:"Indiquez un nombre de pièces valide, par exemple 500 ou 2 × 100."});

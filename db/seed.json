@@ -1263,5 +1263,718 @@
     "notes": "",
     "sourcePage": 37,
     "sourceDocument": "Puzzle liste-7.pdf"
+  },
+  {
+    "id": "pdf-76",
+    "title": "Little Book Club",
+    "brand": "Pieces & Peace",
+    "author": "Lack Studio",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/76.webp",
+    "notes": "",
+    "sourcePage": 37,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-77",
+    "title": "Murmure sur les collines",
+    "brand": "Pieces & Peace",
+    "author": "Cathie Illustrates",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/77.webp",
+    "notes": "",
+    "sourcePage": 38,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-78",
+    "title": "5 minutes’ Peace",
+    "brand": "Pieces & Peace",
+    "author": "Sally Wilson",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "96",
+    "piecesTotal": 96,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/78.webp",
+    "notes": "",
+    "sourcePage": 38,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-79",
+    "title": "Festival d’automne",
+    "brand": "Pieces & Peace",
+    "author": "Abby Jacobs",
+    "themes": [
+      "Halloween"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/79.webp",
+    "notes": "",
+    "sourcePage": 39,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-80",
+    "title": "Waiting for santa",
+    "brand": "Reverie Puzzle",
+    "author": "Rose Skelton",
+    "themes": [
+      "Noël"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/80.webp",
+    "notes": "",
+    "sourcePage": 39,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-81",
+    "title": "Woodland Christmas",
+    "brand": "Reverie Puzzle",
+    "author": "Rose Skelton",
+    "themes": [
+      "Noël"
+    ],
+    "piecesLabel": "4 × 99",
+    "piecesTotal": 396,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/81.webp",
+    "notes": "",
+    "sourcePage": 40,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-82",
+    "title": "Home is where the cats are",
+    "brand": "Pieces & Peace",
+    "author": "Sofia Cardoso",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/82.webp",
+    "notes": "",
+    "sourcePage": 40,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-83",
+    "title": "Little Winter House",
+    "brand": "Olléo",
+    "author": "Louise Gobinet",
+    "themes": [
+      "Noël"
+    ],
+    "piecesLabel": "99",
+    "piecesTotal": 99,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/83.webp",
+    "notes": "",
+    "sourcePage": 41,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-84",
+    "title": "Magical Holiday",
+    "brand": "Olléo",
+    "author": "Yael Hofri",
+    "themes": [
+      "Noël"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/84.webp",
+    "notes": "",
+    "sourcePage": 41,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-85",
+    "title": "Coin lecture vert",
+    "brand": "Pieces & Peace",
+    "author": "Karen Cook",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/85.webp",
+    "notes": "",
+    "sourcePage": 42,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-86",
+    "title": "Sugarplum Village",
+    "brand": "Puzzle Weekend",
+    "author": "Yael Hofri",
+    "themes": [
+      "Hiver"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/86.webp",
+    "notes": "",
+    "sourcePage": 42,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-87",
+    "title": "The Cat Groomer",
+    "brand": "Ravensburger",
+    "author": "Dean Macadam",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/87.webp",
+    "notes": "",
+    "sourcePage": 43,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-88",
+    "title": "The Big Rock",
+    "brand": "The Magic Puzzle",
+    "author": "Annika Brandow",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/88.webp",
+    "notes": "",
+    "sourcePage": 43,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-89",
+    "title": "The Mystic Maze",
+    "brand": "The Magic Puzzle",
+    "author": "Boya Sun",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/89.webp",
+    "notes": "",
+    "sourcePage": 44,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-90",
+    "title": "The Secret Soup",
+    "brand": "The Magic Puzzle",
+    "author": "Margaux peltat",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/90.webp",
+    "notes": "",
+    "sourcePage": 44,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-91",
+    "title": "The Forest Feast",
+    "brand": "The Magic Puzzle",
+    "author": "SMK",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/91.webp",
+    "notes": "",
+    "sourcePage": 45,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-92",
+    "title": "Tinsel City",
+    "brand": "Galison",
+    "author": "Laura Watkins",
+    "themes": [
+      "Hiver"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/92.webp",
+    "notes": "",
+    "sourcePage": 45,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-93",
+    "title": "Saisons à Kyoto",
+    "brand": "Eeboo",
+    "author": "Jennifer Potter",
+    "themes": [
+      "Printemps"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/93.webp",
+    "notes": "",
+    "sourcePage": 46,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-94",
+    "title": "Salon de jardin d’été",
+    "brand": "Ravensburger",
+    "author": "Emma Allen",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/94.webp",
+    "notes": "",
+    "sourcePage": 46,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-95",
+    "title": "Welcome to care-a-lot",
+    "brand": "Ravensburger",
+    "author": "Care Bears company",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/95.webp",
+    "notes": "",
+    "sourcePage": 47,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-96",
+    "title": "Goldilocks Gets Caught !",
+    "brand": "Ravensburger",
+    "author": "Dean Macadam",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/96.webp",
+    "notes": "",
+    "sourcePage": 47,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-97",
+    "title": "The Dog Walker",
+    "brand": "Ravensburger",
+    "author": "Dean Macadam",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/97.webp",
+    "notes": "",
+    "sourcePage": 48,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-98",
+    "title": "La ville de Stockholm",
+    "brand": "Eeboo",
+    "author": "Uta Krogman",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/98.webp",
+    "notes": "",
+    "sourcePage": 48,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-99",
+    "title": "Sorcerer’s Dan",
+    "brand": "Eeboo",
+    "author": "Jennifer Potter",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/99.webp",
+    "notes": "",
+    "sourcePage": 49,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-100",
+    "title": "La bonne franquette",
+    "brand": "Trevell",
+    "author": "Anaïs Sanchez",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/100.webp",
+    "notes": "",
+    "sourcePage": 49,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-101",
+    "title": "Fournitures de magies",
+    "brand": "Michel Wilson",
+    "author": "Madeleine  Zulke",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "150",
+    "piecesTotal": 150,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/101.webp",
+    "notes": "",
+    "sourcePage": 50,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-102",
+    "title": "Train Ride",
+    "brand": "Elewhite",
+    "author": "Kayla Gao",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "1000",
+    "piecesTotal": 1000,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/102.webp",
+    "notes": "",
+    "sourcePage": 50,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-103",
+    "title": "Chat Paresseux",
+    "brand": "Michel Wilson",
+    "author": "Limduey",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "80",
+    "piecesTotal": 80,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/103.webp",
+    "notes": "",
+    "sourcePage": 51,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-104",
+    "title": "Hiver Douillet",
+    "brand": "La Pauz",
+    "author": "Sonia Cavallini",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "99",
+    "piecesTotal": 99,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/104.webp",
+    "notes": "",
+    "sourcePage": 51,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-105",
+    "title": "Super Market",
+    "brand": "Heol",
+    "author": "Clo’Hey",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/105.webp",
+    "notes": "",
+    "sourcePage": 52,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-106",
+    "title": "The Fruit Basket",
+    "brand": "Pieces & Peace",
+    "author": "Katy Simply",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "96",
+    "piecesTotal": 96,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/106.webp",
+    "notes": "",
+    "sourcePage": 52,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-107",
+    "title": "Reading Cosy Spot",
+    "brand": "Pieces & Peace",
+    "author": "Olivia Gibbs",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "96",
+    "piecesTotal": 96,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/107.webp",
+    "notes": "",
+    "sourcePage": 53,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-108",
+    "title": "Portugal",
+    "brand": "Pieces & Peace",
+    "author": "Sabina Fenn",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/108.webp",
+    "notes": "",
+    "sourcePage": 53,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-109",
+    "title": "Green Dream",
+    "brand": "Trevell",
+    "author": "Laura Lhuillier",
+    "themes": [
+      "Printemps",
+      "Été"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/109.webp",
+    "notes": "",
+    "sourcePage": 54,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-110",
+    "title": "Potager d’automne",
+    "brand": "La Pauz",
+    "author": "Sonia Cavallini",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "99",
+    "piecesTotal": 99,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/110.webp",
+    "notes": "",
+    "sourcePage": 54,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-111",
+    "title": "Cueillette d’automne",
+    "brand": "Heol",
+    "author": "Anaïs Sanchez",
+    "themes": [
+      "Automne"
+    ],
+    "piecesLabel": "500",
+    "piecesTotal": 500,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/111.webp",
+    "notes": "",
+    "sourcePage": 55,
+    "sourceDocument": "Puzzle liste-8.pdf"
+  },
+  {
+    "id": "pdf-112",
+    "title": "Fernando De Noronha",
+    "brand": "Trevell",
+    "author": "Nicolle Lalonde",
+    "themes": [
+      "Toute l’année"
+    ],
+    "piecesLabel": "99",
+    "piecesTotal": 99,
+    "status": "todo",
+    "completionDate": null,
+    "datePrecision": "unknown",
+    "purchasedAt": null,
+    "imageUrl": "/puzzles/112.webp",
+    "notes": "",
+    "sourcePage": 55,
+    "sourceDocument": "Puzzle liste-8.pdf"
   }
 ]
